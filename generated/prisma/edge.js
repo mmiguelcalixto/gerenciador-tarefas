@@ -139,7 +139,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\12300098\\gerenciador-tarefas\\generated\\prisma",
+      "value": "C:\\Users\\migue\\Desktop\\Escola\\DevWeb\\tarefas\\gerenciador-tarefas\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -153,12 +153,11 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\12300098\\gerenciador-tarefas\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\migue\\Desktop\\Escola\\DevWeb\\tarefas\\gerenciador-tarefas\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": "../../.env",
-    "schemaEnvPath": "../../.env"
+    "rootEnvPath": null
   },
   "relativePath": "../../prisma",
   "clientVersion": "6.15.0",

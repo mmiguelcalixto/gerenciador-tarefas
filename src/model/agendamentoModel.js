@@ -5,16 +5,15 @@ export class AgendamentoModel {
   async adicionarAgendamento(tarefaId, dataLimite) {
     return await prisma.agendamento.create({
       data: {
-        ...data,
         tarefaId: tarefaId,
-        dataLimite: dataLimite
+        dataLimite: new Date(dataLimite)
       }
     });
   }
 
   async atualizarStatusAgendamento() {
     const tarefaModel = new TarefaModel()
-    const tarefas = tarefaModel.buscarTodasAsTarefas();
+    const tarefas = await tarefaModel.buscarTodasAsTarefas();
 
     tarefas.map(async tarefa => {
       if (tarefa.dataLimite > Date.now()) {

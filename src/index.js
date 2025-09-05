@@ -33,6 +33,7 @@ async function main() {
           const tarefas = await controller.listarTodasAsTarefas();
           mostrarTarefas(tarefas);
         } catch (err) {
+          console.error(err);
           mostrarMensagem("erro", "Erro ao listar tarefas.");
         }
         break;
@@ -46,6 +47,7 @@ async function main() {
             await controller.completarTarefa(tarefas[resposta.index].id);
             mostrarMensagem("sucesso", "Tarefa concluída com sucesso!");
           } catch (err) {
+            console.error(err);
             mostrarMensagem("erro", "Erro ao concluir tarefa.");
           }
         }
@@ -60,6 +62,7 @@ async function main() {
             await controller.removerTarefa(tarefas[resposta.index].id);
             mostrarMensagem("sucesso", "Tarefa removida com sucesso!");
           } catch (err) {
+            console.error(err);
             mostrarMensagem("erro", "Erro ao remover tarefa.");
           }
         }

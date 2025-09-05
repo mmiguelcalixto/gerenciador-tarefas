@@ -16,7 +16,7 @@ export class TarefaController {
   }
 
   async listarTodasAsTarefas() {
-    await agendamentoModel.atualizarStatusAgendamento();
+    await this.agendamentoModel.atualizarStatusAgendamento();
 
     return await this.tarefaModel.buscarTodasAsTarefas();
   }

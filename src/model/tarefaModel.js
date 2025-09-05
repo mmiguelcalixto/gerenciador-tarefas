@@ -18,14 +18,14 @@ export class TarefaModel {
   }
 
   async atualizarTarefa(id, dadosTarefa) {
-    return await prisma.customer.update({
+    return await prisma.tarefa.update({
       where: { id: id },
       data: { ...dadosTarefa },
     });
   }
 
   async deletarTarefa(id) {
-    return await prisma.customer.delete({
+    return await prisma.tarefa.delete({
       where: { id: id },
     });
   }

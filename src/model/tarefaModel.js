@@ -1,4 +1,4 @@
-import { prisma } from "../utils/prisma";
+import { prisma } from "../utils/prisma.js";
 
 export class TarefaModel {
   async criarTarefa(dadosTarefa) {
@@ -9,6 +9,12 @@ export class TarefaModel {
 
   async buscarTodasAsTarefas() {
     return await prisma.tarefa.findMany();
+  }
+
+  async getById(id) {
+    return await prisma.tarefa.findUnique({
+      where: { id: id},
+    });
   }
 
   async atualizarTarefa(id, dadosTarefa) {

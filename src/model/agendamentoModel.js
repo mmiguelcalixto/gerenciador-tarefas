@@ -1,5 +1,5 @@
-import { prisma } from "../utils/prisma";
-import { TarefaModel } from "./tarefaModel";
+import { prisma } from "../utils/prisma.js";
+import { TarefaModel } from "./tarefaModel.js";
 
 export class AgendamentoModel {
   async adicionarAgendamento(tarefaId, dataLimite) {
